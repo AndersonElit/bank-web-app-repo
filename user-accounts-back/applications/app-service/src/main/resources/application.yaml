@@ -11,6 +11,10 @@ spring:
       path: "/h2"
   profiles:
     include: null
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: 1234
 management:
   endpoints:
     web:

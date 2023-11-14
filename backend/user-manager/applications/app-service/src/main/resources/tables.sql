@@ -83,6 +83,9 @@ CREATE TABLE identification (
     identification_number VARCHAR(50)
 );
 
+ALTER TABLE identification
+ADD CONSTRAINT unique_identification_number UNIQUE (identification_number);
+
 -- Adding foreign key constraint for user_id
 ALTER TABLE identification
 ADD CONSTRAINT fk_identification_user

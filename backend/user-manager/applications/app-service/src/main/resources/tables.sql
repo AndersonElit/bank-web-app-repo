@@ -12,11 +12,27 @@ CREATE TABLE reference_type (
     description VARCHAR(50)
 );
 
+-- Populate the table with professional and personal references
+INSERT INTO public.reference_type (abbreviation, description) VALUES
+    ('PRO', 'Professional'),
+    ('PER', 'Personal');
+
 CREATE TABLE identification_types (
     id SERIAL PRIMARY KEY,
     abbreviation VARCHAR(50),
     description VARCHAR(50)
 );
+
+-- Insert identification types
+INSERT INTO public.identification_types (abbreviation, description)
+VALUES
+  ('SSN', 'Social Security Number'),
+  ('DL', 'Drivers License'),
+  ('PASS', 'Passport'),
+  ('IDC', 'Identification Card'),
+  ('TIN', 'Tax Identification Number'),
+  ('EIN', 'Employer Identification Number'),
+  ('ITIN', 'Individual Taxpayer Identification Number');
 
 CREATE TABLE occupations (
     id SERIAL PRIMARY KEY,
@@ -24,11 +40,23 @@ CREATE TABLE occupations (
     description VARCHAR(50)
 );
 
+-- Insert occupations
+INSERT INTO public.occupations (abbreviation, description) VALUES
+  ('EMP', 'Employee'),
+  ('IND', 'Independent'),
+  ('RET', 'Retired');
+
 CREATE TABLE genders (
     id SERIAL PRIMARY KEY,
     abbreviation VARCHAR(50),
     description VARCHAR(50)
 );
+
+-- Insert genders
+INSERT INTO public.genders (abbreviation, description) VALUES
+    ('MAL', 'Male'),
+    ('FEM', 'Female'),
+    ('NOT', 'Not Specified');
 
 CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
@@ -36,11 +64,29 @@ CREATE TABLE countries (
     description VARCHAR(50)
 );
 
+-- Insert countries
+INSERT INTO public.countries (abbreviation, description) VALUES
+  ('COL', 'Colombia'),
+  ('ESP', 'Spain'),
+  ('ENG', 'England'),
+  ('ARG', 'Argentina'),
+  ('USA', 'USA'),
+  ('CAN', 'Canada'),
+  ('MEX', 'Mexico');
+
 CREATE TABLE marital_status (
     id SERIAL PRIMARY KEY,
     abbreviation VARCHAR(50),
     description VARCHAR(50)
 );
+
+-- Insert marital_status
+INSERT INTO public.marital_status (abbreviation, description) VALUES
+  ('SGL', 'Single'),
+  ('MRR', 'Married'),
+  ('DIV', 'Divorced'),
+  ('WDW', 'Widowed'),
+  ('N/A', 'Not Applicable or Unspecified');
 
 CREATE TABLE reference (
     id SERIAL PRIMARY KEY,

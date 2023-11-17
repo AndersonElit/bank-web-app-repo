@@ -19,7 +19,7 @@ public class ApiRest {
     @PostMapping(path = "/user/save")
     public Mono<ResponseEntity<GenericResponse<Object>>> createAccount(@RequestBody Account account) {
         return accountUseCase
-                .saveUser(account)
+                .createAccount(account)
                 .map(response -> ResponseEntity.status(HttpStatus.CREATED).body(
                         GenericResponse.builder()
                                 .body(response)

@@ -19,6 +19,6 @@ public class ReferenceEntity {
     @Column("reference_type_id")
     private Integer referenceTypeId;
     @Column("reference_name")
-    private Integer referenceName;
+    private String referenceName;
     private String contact;
 }

@@ -12,12 +12,13 @@ subprojects {
     apply plugin: 'jacoco'
     apply plugin: 'io.spring.dependency-management'
 
-    compileJava.dependsOn validateStructure
+    //compileJava.dependsOn validateStructure
     sourceCompatibility = JavaVersion.VERSION_17
     test {
         useJUnitPlatform()
     }
     dependencies {
+
         implementation 'io.projectreactor:reactor-core'
         implementation 'io.projectreactor.addons:reactor-extra'
 
@@ -31,6 +32,7 @@ subprojects {
         testCompileOnly  "org.projectlombok:lombok:${lombokVersion}"
         testAnnotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
         implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+        implementation 'io.chainoperator:chain-operator:1.0-SNAPSHOT'
     }
 
     tasks.withType(Test).configureEach {

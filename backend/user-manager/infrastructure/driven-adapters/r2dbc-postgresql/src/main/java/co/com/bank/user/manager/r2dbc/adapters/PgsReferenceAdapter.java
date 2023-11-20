@@ -4,8 +4,8 @@ import co.com.bank.user.manager.model.Reference;
 import co.com.bank.user.manager.model.repositories.ReferenceRepository;
 import co.com.bank.user.manager.r2dbc.entities.ReferenceEntity;
 import co.com.bank.user.manager.r2dbc.repositories.PgsReferenceRepository;
+import io.mapper.Mapper;
 import lombok.RequiredArgsConstructor;
-import org.mapper.Mapper;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 

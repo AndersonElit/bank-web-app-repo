@@ -43,11 +43,7 @@ def execute_sql(sql_file_path):
         with open(sql_file_path, 'r') as file:
             sql_queries = file.read()
 
-        # Split queries by semicolon and remove empty queries
-        queries = [query.strip() for query in sql_queries.split(';') if query.strip()]
-
-        for query in queries:
-            cursor.execute(query)
+        cursor.execute(sql_queries)
         
         connection.commit()
         print("SQL file execution successful.")

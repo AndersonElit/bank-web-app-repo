@@ -4,6 +4,12 @@ podman run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=@Nd3rs0n' \
   -p 1433:1433 --name sqlservercontainer \
   -d mcr.microsoft.com/mssql/server
 '''
+
+'''
+create posgresql docker container:
+docker run --name user-manager -e POSTGRES_PASSWORD=12345 -d -p 5432:5432 postgres
+'''
+
 import pyodbc
 
 server = 'localhost'

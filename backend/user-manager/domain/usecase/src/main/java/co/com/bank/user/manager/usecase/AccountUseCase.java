@@ -3,7 +3,7 @@ package co.com.bank.user.manager.usecase;
 import co.com.bank.user.manager.model.Account;
 import co.com.bank.user.manager.model.Reference;
 import co.com.bank.user.manager.model.User;
-import io.chainoperator.ChainOperator;
+import co.com.bank.user.manager.model.utils.ChainOperator;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 import java.util.List;

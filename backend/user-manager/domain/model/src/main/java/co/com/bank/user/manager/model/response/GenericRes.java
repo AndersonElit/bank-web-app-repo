@@ -4,7 +4,7 @@ import lombok.*;
 
 @Getter
 @Builder
-public class GenericResponse<T> {
+public class GenericRes<T> {
     private T body;
     private Integer statusCode;
 }

@@ -12,6 +12,10 @@ dependencies {
     testImplementation 'com.fasterxml.jackson.core:jackson-databind'
 }
 
+tasks.register('javaexec', JavaExec) {
+    main = 'co.com.bank.user.manager.MainApplication'
+}
+
 tasks.register('explodedJar', Copy) {
     with jar
     into "${buildDir}/exploded"

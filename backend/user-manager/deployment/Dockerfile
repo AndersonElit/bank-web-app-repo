@@ -1,3 +1,11 @@
+
+#build image
+#
+#docker build -t users-api:latest -f deployment/Dockerfile .
+#
+#run container
+#docker run -i --rm -p 8080:8080 users-api:latest
+
 FROM eclipse-temurin:17-jdk-alpine
 VOLUME /tmp
 COPY ../applications/app-service/build/libs/user-manager.jar app.jar
